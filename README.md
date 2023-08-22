@@ -1,13 +1,10 @@
-# opensearch
-
-## AOS High Level Architecture
-![image](https://github.com/symeta/opensearch/assets/97269758/11e23894-f226-4c47-b380-1bc07701351e)
+# opensearch operational guidance
 
 
-## VPC Settings
+- [1. general configuration guidance](https://aws.amazon.com/blogs/big-data/best-practices-for-configuring-your-amazon-opensearch-service-domain/) 
+- [2. oepnsearch VPC settings](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/vpc.html)
+- [3. integration with AD1](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/saml.html)
+- [4. integration with AD2](https://docs.aws.amazon.com/cognito/latest/developerguide/cognito-user-pools-integrating-3rd-party-saml-providers.html)
 
-- [1. oepnsearch VPC settings](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/vpc.html)
-
-## Integration with AD
 
 
