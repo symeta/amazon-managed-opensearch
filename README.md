@@ -1,4 +1,4 @@
-# Guidance towards AOS Operation
+# Guidance towards Amanzon Managed Opensearch (AOS) Operation
 
 
 - [1. General Configuration Guidance](https://aws.amazon.com/blogs/big-data/best-practices-for-configuring-your-amazon-opensearch-service-domain/) 
