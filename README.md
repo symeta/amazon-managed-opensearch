@@ -5,7 +5,8 @@
 
 ## AOS Deployment Architecture
 <img width="2226" alt="Screenshot 2023-08-27 at 09 52 28" src="https://github.com/symeta/amazon-managed-opensearch/assets/97269758/c98ed4d6-0f25-41af-8d6f-0176f2a81229">
-- [standard to ultrawarm]([https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ism.html](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ultrawarm.html))
+
+- [standard to ultrawarm](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ultrawarm.html))
 - [ultrawarm to cold](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cold-storage.html)
 - [automatic migration](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ism.html)
 
