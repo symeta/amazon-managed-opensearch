@@ -1,9 +1,12 @@
 # Guidance towards Amanzon Managed Opensearch (AOS) Operation
 
 ## AOS Ops Scope
-Screenshot 2023-08-27 at 09.50.23.png<img width="2122" alt="image" src="https://github.com/symeta/amazon-managed-opensearch/assets/97269758/b8f1ceb1-b2d5-4290-a8f8-6fd79b66cd81">
+<img width="2122" alt="image" src="https://github.com/symeta/amazon-managed-opensearch/assets/97269758/b8f1ceb1-b2d5-4290-a8f8-6fd79b66cd81">
 ## AOS Deployment Architecture
 <img width="2226" alt="Screenshot 2023-08-27 at 09 52 28" src="https://github.com/symeta/amazon-managed-opensearch/assets/97269758/c98ed4d6-0f25-41af-8d6f-0176f2a81229">
+-[standard to ultrawarm]([https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ism.html](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ultrawarm.html))
+-[ultrawarm to cold](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/cold-storage.html)
+-[automatic migration](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ism.html)
 
 - [1. General Configuration Guidance](https://aws.amazon.com/blogs/big-data/best-practices-for-configuring-your-amazon-opensearch-service-domain/) 
 - [2. AOS VPC settings](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/vpc.html)
