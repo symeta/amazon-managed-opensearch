@@ -38,11 +38,12 @@ If in case to implement an AAD integration with Opensearch via SAML is essential
     - step1: create role with Trusted entity type as AWS account, attach the role with AmazonOpenSearchServiceFullAccess policy (for other operation, could attach different Opensearch related policies according to specific requirement, [amazon managed opensearch IAM policy](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ac-managed.html));
     - step2: attach the role to the IAM user who is the maintenance persona
     
-- 1.2 Via CLI/SDK deployed on aws EC2
+- 1.2 Via CLI deployed on aws EC2
+    - pre-requsite: aws java sdk installed on ec2
     - step1: create role with Trusted entity type as AWS service, and choose ec2 in Use Case section, attach the role with AmazonOpenSearchServiceFullAccess policy (for other operation, could attach different Opensearch related policies according to specific requirement, [amazon managed opensearch IAM policy](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ac-managed.html));
-    - step2: attach the role to the ec2 instance, on which the CLI/SDK as well as java application is deployed
+    - step2: attach the role to the ec2 instance, on which the CLI as well as java application is deployed
 
-- 1.3 Via CLI/SDK deployed on virtual machines outside aws, e.g. on-prem virtual machines, azure virtual machines.
+- 1.3 Via CLI deployed on virtual machines outside aws, e.g. on-prem virtual machines, azure virtual machines.
     - step1: admin IAM user to create a new IAM user (e.g. named aos-ops) without any permissions;
     - step2: admin IAM user to create the aos-ops IAM user its AK/SK in aos-ops IAM console, Security Credentials tab;
     - step3: admin IAM user to create role with Trusted entity type as AWS service, and choose ec2 in Use Case section, attach the role with AmazonOpenSearchServiceFullAccess policy (for other operation, could attach different Opensearch related policies according to specific requirement, [amazon managed opensearch IAM policy](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ac-managed.html));
@@ -77,6 +78,7 @@ If in case to implement an AAD integration with Opensearch via SAML is essential
 #### 2. Java application deployed on EC2/azure virtual machine/on-prem virtual machine to manipulate AOS index
   - pre-requisite1: the AOS cluster must enable fine-grained access control;
   - pre-requisite2: the AOS cluster must use username/password way to create master user, given that Opensearch Dashboard access is essential and is achieved via browser signing requests.
+  - pre-requsite: aws java sdk installed on EC2/azure virtual machine/on-prem virtual machine
   - step1: master user login to Opensearch Dashboard to create internal users;
   - step2: one java application running on EC2/azure virtual machine/on-prem virtual machine can manipulate AOS index by creating Opensearch Client with one specific internal user's credentials, click the [sample code](https://opensearch.org/docs/latest/clients/java/) to get more details.
 
