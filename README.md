@@ -80,8 +80,6 @@ If in case to implement an AAD integration with Opensearch via SAML is essential
   - step1: master user login to Opensearch Dashboard to create internal users;
   - step2: one java application running on EC2/azure virtual machine/on-prem virtual machine can manipulate AOS index by creating Opensearch Client with one specific internal user's credentials, click the [sample code](https://opensearch.org/docs/latest/clients/java/) to get more details.
 
-
-## Java application manipulate Opensearch Index
 ## AOS Cross Region DR
 - [Cross Cluster Replication](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/replication.html)
 - [AOS cross region DR leveraging on Snapshots](https://github.com/symeta/opensearch/blob/cross-region-dr/README.md)
