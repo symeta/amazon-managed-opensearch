@@ -55,7 +55,7 @@ If in case to implement an AAD integration with Opensearch via SAML is essential
           {
               "Effect": "Allow",
               "Principal": {
-                  "AWS": "arn:aws:iam::<account id>:user/<IAM user B>"
+                  "AWS": "arn:aws:iam::<account id>:user/<aos-ops IAM user>"
               },
               "Action": "sts:AssumeRole"
           }
