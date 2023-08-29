@@ -34,19 +34,20 @@ If in case to implement an AAD integration with Opensearch via SAML is essential
 
 ### Application Scenario Handling
 #### 1. Platform maintenance persona to operate AOS cluster, e.g. create, delete, upgrade cluster, how to manage permission
-1.1 Via aws console
+- 1.1 Via aws console
     - step1: create role with Trusted entity type as AWS account, attach the role with AmazonOpenSearchServiceFullAccess policy (for other operation, could attach different Opensearch related policies according to specific requirement, [amazon managed opensearch IAM policy](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ac-managed.html));
     - step2: attach the role to the IAM user who is the maintenance persona
     
-1.2 Via CLI/SDK deployed on aws EC2
+- 1.2 Via CLI/SDK deployed on aws EC2
     - step1: create role with Trusted entity type as AWS service, and choose ec2 in Use Case section, attach the role with AmazonOpenSearchServiceFullAccess policy (for other operation, could attach different Opensearch related policies according to specific requirement, [amazon managed opensearch IAM policy](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ac-managed.html));
     - step2: attach the role to the ec2 instance, on which the CLI/SDK as well as java application is deployed
 
-1.3 Via CLI/SDK deployed on virtual machines outside aws, e.g. on-prem virtual machines, azure virtual machines.
+- 1.3 Via CLI/SDK deployed on virtual machines outside aws, e.g. on-prem virtual machines, azure virtual machines.
     - step1: admin IAM user to create a new IAM user (e.g. named aos-ops) without any permissions;
     - step2: admin IAM user to create the aos-ops IAM user its AK/SK in aos-ops IAM console, Security Credentials tab;
     - step3: admin IAM user to create role with Trusted entity type as AWS service, and choose ec2 in Use Case section, attach the role with AmazonOpenSearchServiceFullAccess policy (for other operation, could attach different Opensearch related policies according to specific requirement, [amazon managed opensearch IAM policy](https://docs.aws.amazon.com/opensearch-service/latest/developerguide/ac-managed.html));
     - step4: admin IAM user to let aos-ops IAM user to assume the service role by amending the service role's Trust relationships Tab to below:
+
     ```json
     {
         "Version": "2012-10-17",
@@ -61,12 +62,15 @@ If in case to implement an AAD integration with Opensearch via SAML is essential
         ]
     }
     ```
-    - step5: install aws cli package on the virtual machine
+    
+    - step5: install aws cli package on the virtual machine:
+  
     ```sh
     curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
     unzip awscliv2.zip
     sudo ./aws/install
     ```
+
     - step6: run aws configure on the virtual machine and input aos-ops IAM user's AK/SK credentials
     
 
