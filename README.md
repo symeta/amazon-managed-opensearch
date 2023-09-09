@@ -75,7 +75,7 @@ If in case to implement an AAD integration with Opensearch via SAML is essential
     - step6: run aws configure on the virtual machine and input aos-ops IAM user's AK/SK credentials
     
 
-#### 2. Java application deployed on EC2/azure virtual machine/on-prem virtual machine to manipulate AOS index
+#### 2. Java application deployed on EC2/azure virtual machine/on-prem virtual machine to manipulate AOS index, how to manager permission
   - pre-requisite1: the AOS cluster must enable fine-grained access control;
   - pre-requisite2: the AOS cluster must use username/password way to create master user, given that Opensearch Dashboard access is essential and is achieved via browser signing requests.
   - pre-requisite3: aws java sdk installed on EC2/azure virtual machine/on-prem virtual machine
